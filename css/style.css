@@ -1176,6 +1176,7 @@ textarea:focus {
     margin-right: 10px;
     color: #fff;
     font-size: 21px;
+    vertical-align: middle;
 }
 
 .contact-info p {
