@@ -16,6 +16,7 @@
     <!-- main css -->
     <link href="css/style.css" rel="stylesheet">
 
+    <script src='https://www.google.com/recaptcha/api.js'></script>
 
     <!-- modernizr -->
     <script src="js/modernizr.js"></script>
@@ -90,37 +91,46 @@
     <!-- main-container -->
     <div class="container main-container">
         <div class="col-md-6">
-            <form action="#" method="post">
+            <form id="contactForm" action="handler.php" method="post">
                 <div class="row">
                     <div class="col-md-6">
                         <div class="input-contact">
-                            <input type="text" name="name">
+                            <!--input type="text" name="name"-->
+                            <input id="name" class="form-control" name="name" required type="text">
                             <span>Ваше имя</span>
                         </div>
                     </div>
                     <div class="col-md-6">
                         <div class="input-contact">
-                            <input type="text" name="email">
+                            <input id="email" class="form-control" name="email" required type="text">
                             <span>Почта</span>
                         </div>
                     </div>
                     <div class="col-md-12">
                         <div class="input-contact">
-                            <input type="text" name="object">
+                            <input id="theme" class="form-control" name="theme" required type="text">
                             <span>Тема</span>
                         </div>
                     </div>
                     <div class="col-md-12">
                         <div class="textarea-contact">
-                            <textarea name="message"></textarea>
+                            <textarea class="form-control" id="message" name="message" rows="3" required type="text"></textarea>
+                            
                             <span>Сообщение</span>
                         </div>
                     </div>
                     <div class="col-md-12">
-                        <a href="#" class="btn btn-box">Отправить</a>
+                      
+                        <button id="button" class="btn btn-success" type="submit">Отправить</button>
                     </div>
+
                 </div>
+                <div class="result">
+							<span id="answer"></span>
+							<span id="loader" style="display:none"><img src="images/loader.gif" alt=""></span>
+						</div>
             </form>
+
         </div>
 
         <div class="col-md-6">
@@ -164,6 +174,16 @@
 
     <!--  custom script -->
     <script src="js/custom.js"></script>
+
+
+
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+	
+	<!-- Маска для номера телефона -->
+	<script src="js/jquery.maskedinput.min.js"></script>
+	<!-- Инициализация и Ajax-запрос -->
+	<script src="js/main.js"></script>
+	
 
 </body>
 
